@@ -2,7 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import { useState, useEffect } from "react";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState();
+  const [listOfRestaurants, setListOfRestaurants] = useState([]);
 
   
   const fetchData = async () => {
@@ -10,7 +10,7 @@ const Body = () => {
       "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
       );
       const data = await res.json();
-      setListOfRestaurants(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map((res) => res));
+      setListOfRestaurants(data?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants.map((res) => res));
     };
     
     useEffect(() => {
