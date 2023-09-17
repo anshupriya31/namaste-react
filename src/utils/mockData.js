@@ -2,7 +2,7 @@ const resList = [
             {
               "info": {
                 "id": "5934",
-                "name": "Burger King",
+                "name": "King",
                 "cloudinaryImageId": "e33e1d3ba7d6b2bb0d45e1001b731fcf",
                 "locality": "Koramangala",
                 "areaName": "Koramangala",
@@ -96,7 +96,7 @@ const resList = [
             {
               "info": {
                 "id": "65797",
-                "name": "Leon's - Burgers & Wings (Leon Grill)",
+                "name": "Burgers & Wings (Leon Grill)",
                 "cloudinaryImageId": "r4ufflqojich0r29efvc",
                 "locality": "Koramangala",
                 "areaName": "Koramangala",
@@ -192,7 +192,7 @@ const resList = [
             {
               "info": {
                 "id": "506322",
-                "name": "Louis Burger",
+                "name": "Louis",
                 "cloudinaryImageId": "19d3d352cc815b9d88b22617b41fa97b",
                 "locality": "2nd stage domlur",
                 "areaName": "Indiranagar",
@@ -300,7 +300,7 @@ const resList = [
             {
               "info": {
                 "id": "23683",
-                "name": "McDonald's",
+                "name": "McD",
                 "cloudinaryImageId": "ee5f8e06b300efc07c9fe3f4df40dfc4",
                 "locality": "2nd Stage",
                 "areaName": "Btm Layout",

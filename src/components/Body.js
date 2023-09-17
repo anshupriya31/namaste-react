@@ -1,9 +1,22 @@
 import RestaurantCard from "./RestaurantCard";
-import { useState } from "react";
-import resList from "../utils/mockData";
+import { useState, useEffect } from "react";
 
 const Body = () => {
-  const [listOfRestaurants, setListOfRestaurants] = useState(resList);
+  const [listOfRestaurants, setListOfRestaurants] = useState();
+
+  
+  const fetchData = async () => {
+    const res = await fetch(
+      "https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      const data = await res.json();
+      setListOfRestaurants(data.data.cards[1].card.card.gridElements.infoWithStyle.restaurants.map((res) => res));
+    };
+    
+    useEffect(() => {
+      fetchData();
+    }, []);
+
   return (
     <div className="body">
       <div className="filter">
@@ -20,7 +33,7 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
+        {listOfRestaurants?.map((restaurant) => (
           <RestaurantCard key={restaurant.info.id} resData={restaurant} />
         ))}
       </div>
