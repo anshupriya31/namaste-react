@@ -28,7 +28,7 @@ class UserClass extends React.Component {
   }
 
   componentDidUpdate() {
-    console.log("Component Did Update");
+    // console.log("Component Did Update");
   }
 
   render() {
