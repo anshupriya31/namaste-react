@@ -62,6 +62,7 @@ const Body = () => {
               );
               // console.log(res);
               setFilteredRestaurant(filteredRestaurant);
+              console.log(filteredRestaurant);
             }}
           >
             Search
@@ -75,6 +76,7 @@ const Body = () => {
                 (resList) => resList.info.avgRating > 4
               );
               setListOfRestaurants(filteredList);
+              console.log(filteredList);
             }}
           >
             Top Rated Restaurants
