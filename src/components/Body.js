@@ -44,7 +44,7 @@ const Body = () => {
     <Shimmer />
   ) : (
     <div className="body">
-      <div className="filter">
+      <div className="flex">
         <div className="search m-4 p-4">
           <input
             type="text"
@@ -83,7 +83,7 @@ const Body = () => {
           </button>
         </div>
       </div>
-      <div className="res-container">
+      <div className="flex flex-wrap">
         {filteredRestaurant?.map((restaurant) => (
           <Link
             className="remove-link"
