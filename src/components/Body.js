@@ -40,7 +40,6 @@ const Body = () => {
         Looks like you are offline!! Please check your internet connection.
       </h1>
     );
-  // console.log(listOfRestaurants);
 
   return listOfRestaurants.length === 0 ? (
     <Shimmer />
@@ -62,9 +61,7 @@ const Body = () => {
               const filteredRestaurant = listOfRestaurants.filter((res) =>
                 res.info.name.toLowerCase().includes(searchText.toLowerCase())
               );
-              // console.log(res);
               setFilteredRestaurant(filteredRestaurant);
-              console.log(filteredRestaurant);
             }}
           >
             Search
@@ -78,7 +75,6 @@ const Body = () => {
                 (resList) => resList.info.avgRating > 4
               );
               setListOfRestaurants(filteredList);
-              console.log(filteredList);
             }}
           >
             Top Rated Restaurants
